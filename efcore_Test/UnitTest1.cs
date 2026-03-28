@@ -46,16 +46,6 @@ public class DataTest
         ["qweqwdcvbbcnuykyuir4ertzdfggs453456743dfhe", DateTimeOffset.Now]
     ];
 
-    // public static IEnumerable<object[]> DeleteData()
-    // {
-    //     List<object[]> a = [
-    //         [Crud.Read(0).GetAwaiter().GetResult()],
-    //         [Crud.Read(1).GetAwaiter().GetResult()],
-    //         [Crud.Read(2).GetAwaiter().GetResult()]
-    //     ];
-    //
-    //     return a;
-    // }
 }
 
 [TestCaseOrderer("Xunit.Priority.PriorityOrderer", "Xunit.Priority")]
@@ -102,21 +92,6 @@ public class UnitTest1 : IAsyncLifetime
         Assert.Null(await Crud.Read(id));
     }
     
-    
-    // [Theory, Priority(3)]
-    // [MemberData(nameof(DataTest.UpdateData), MemberType = typeof(DataTest))]
-    // public async Task UpdateSuccess(Note note, string text, DateTimeOffset createdAt)
-    // {
-    //     await Crud.Update(note, text, createdAt);
-    // }
-    //
-    //
-    // [Theory, Priority(4)]
-    // [MemberData(nameof(DataTest.DeleteData), MemberType = typeof(DataTest))]
-    // public async Task DeleteSuccess(Note note)
-    // {
-    //     await Crud.Delete(note);
-    // }
     
     
     
